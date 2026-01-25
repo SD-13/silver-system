@@ -1,13 +1,13 @@
 # TODO: Seperate this file out of base as servers DEFFO do not want all of these things
 { pkgs, osConfig, ... }:
-let
-  registryHost = "harbor.okwilkins.dev";
-in
+# let
+#   registryHost = "harbor.okwilkins.dev";
+# in
 {
-  imports = [
-    (import ./docker.nix { inherit pkgs osConfig registryHost; })
-    (import ./buildah.nix { inherit pkgs osConfig registryHost; })
-  ];
+  # imports = [
+  #   (import ./docker.nix { inherit pkgs osConfig registryHost; })
+  #   (import ./buildah.nix { inherit pkgs osConfig registryHost; })
+  # ];
 
   home.packages = with pkgs; [
     zig

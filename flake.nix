@@ -26,7 +26,7 @@
     };
 
     dot-secrets = {
-      url = "git+ssh://git@github.com/okwilkins/.secrets.git";
+      url = "git+ssh://git@github.com/pirate-17/.secrets.git";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

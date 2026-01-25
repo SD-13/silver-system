@@ -2,18 +2,12 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./nvidia.nix
+    # ./nvidia.nix
   ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  boot.initrd.luks.devices."luks-74859448-03b4-4d15-8876-11e22b3813f4".device =
-    "/dev/disk/by-uuid/74859448-03b4-4d15-8876-11e22b3813f4";
 
   # Enable networking
   networking.networkmanager.enable = true;

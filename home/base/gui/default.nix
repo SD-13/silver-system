@@ -5,7 +5,7 @@
     ./browsers
     ./styling
     ./images.nix
-    ./obsidian.nix
+    # ./obsidian.nix
   ];
 
   home.packages = with pkgs; [

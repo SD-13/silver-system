@@ -2,7 +2,7 @@
 {
   imports = [
     ./gui
-    ./yubikey.nix
-    ./sops.nix
+  #  ./yubikey.nix
+  #  ./sops.nix
   ];
 }
