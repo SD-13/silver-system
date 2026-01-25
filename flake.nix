@@ -25,10 +25,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    dot-secrets = {
-      url = "git+ssh://git@github.com/pirate-17/.secrets.git";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # dot-secrets = {
+    #   url = "git+ssh://git@github.com/pirate-17/.secrets.git";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
