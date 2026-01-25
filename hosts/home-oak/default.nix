@@ -41,6 +41,15 @@
     shell = pkgs.zsh;
   };
 
+  systemd.services.bar = {
+    description = "Disable i8042 input";
+    wantedBy = [ "multi-user.target" ];
+    script = ''
+      echo 1 | tee /sys/devices/platform/i8042/serio0/input/input0/inhibited
+    '';
+    path = [ pkgs.coreutils pkgs.gnugrep ];
+  };
+
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
