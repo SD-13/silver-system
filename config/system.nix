@@ -9,7 +9,7 @@
   options.system = {
     username = lib.mkOption {
       type = lib.types.str;
-      default = "jack";
+      default = "pirate";
     };
     userFullname = lib.mkOption {
       type = lib.types.str;
@@ -17,7 +17,7 @@
     };
     userEmail = lib.mkOption {
       type = lib.types.str;
-      default = "sujaydey641@gmail.com";
+      default = "pirate.bobocho@gmail.com";
     };
     homeDir = lib.mkOption {
       type = lib.types.str;
