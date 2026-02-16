@@ -1,4 +1,6 @@
 local map = vim.keymap.set
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- Make sure to setup `mapleader` and `maplocalleader` before loading lazy.nvim so that mappings are correct.
 vim.g.mapleader = " "
@@ -39,11 +41,9 @@ map("n", "<leader>x", ":bd<CR>", { noremap = true, silent = true, desc = "Close 
 map("n", "<Tab>", ":bnext<CR>", { noremap = true, silent = true, desc = "Switch to next buffer" })
 map("n", "<S-Tab>", ":bprevious<CR>", { noremap = true, silent = true, desc = "Switch to previous buffer" })
 
--- Vim Tmux navigation
-vim.api.nvim_set_keymap("n", "<C-h>", "<cmd> TmuxNavigateLeft<cr>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<c-j>", "<cmd> TmuxNavigateDown<cr>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-k>", "<cmd> TmuxNavigateUp<cr>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<C-l>", "<cmd> TmuxNavigateRight<cr>", { noremap = true, silent = true })
+-- Terminals
+map("n", "<C-/>", ":lua Snacks.terminal()<cr>", { desc = "Snacks terminal" })
+map("t", "<C-/>", "<cmd>close<cr>", { desc = "Hide Terminal" })
 
 -- LSP
 map("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
